@@ -1,0 +1,40 @@
+package com.mycompanystandall.provaigorvetor;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author carlos alberto costa
+ */
+public class ProvaIgorVetor {
+
+ public static void main(String[] args) {
+        int [] vetor = new int[5];
+        int maiorNum = 0, menorNum = 0, aux;
+        int i = 0;
+        Scanner ler = new Scanner(System.in);
+        
+        for (i = 0; i <vetor.length; i++){
+        System.out.println("Digite o "+(i+1)+"° número: ");
+        vetor[i] = ler.nextInt();      
+        }
+        for (i = 0; i <vetor.length; i++){
+            if (vetor[i]>maiorNum){
+            maiorNum = vetor[i];
+            menorNum = vetor[i];
+            }else if (maiorNum>maiorNum){
+            aux = maiorNum;
+            maiorNum = aux;
+            }else{
+            menorNum = vetor[i];
+            }
+        }
+        System.out.println("---------NÚMEROS-----------");
+        for (i = 0; i <vetor.length; i++){
+        System.out.print("| "+vetor[i]+" | ");
+        }
+        System.out.println(" ");
+        System.out.println("Maior número: "+maiorNum);
+        System.out.println("Menor número: "+menorNum);
+    }
+}

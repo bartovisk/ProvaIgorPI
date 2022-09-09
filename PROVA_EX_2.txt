@@ -1,0 +1,25 @@
+package com.mycompanystandall.provaigorvetor2;
+
+/**
+ *
+ * @author carlos alberto costa
+ */
+public class ProvaIgorVetor2 {
+
+     public static void main(String[] args) {
+        double [] vetor = new double[25];
+        double salario, resultado1, porcentagem;
+        int i;
+        
+        salario = 1000;
+        porcentagem = 0.015;
+        resultado1 = (salario+(salario*porcentagem));
+        for (i = 0; i <vetor.length; i++){
+        porcentagem = (porcentagem*2);
+        resultado1 = (resultado1+(resultado1*porcentagem));
+        vetor[i] = resultado1;
+        }
+        
+        System.out.println("O salário final será de R$"+vetor[24]);
+    }
+}
